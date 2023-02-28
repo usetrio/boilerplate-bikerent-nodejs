@@ -8,7 +8,17 @@ The goal of this project is to act as a starting point to solve the NodeJS Backe
 
 This is a TypeScript application that:
 
-- exposes two Endpoints (_/api/bikes_ and _/api/bikes/[bikeId]_)
+- exposes the following Endpoints:
+
+> GET _/bikes_
+>
+> GET _/bikes/available_
+>
+> GET _/users_
+>
+> POST _/users_
+>
+> POST _/candidates_
 - connects to a database to retrieve data
 
 ## 🔧 Stack Used
@@ -49,6 +59,12 @@ To run the app in production, you need to execute the following commands:
 - `npm run db:migrate:dev` or `yarn db:migrate:dev`, if you have created any new migrations for the app;
 - `npm run build` or `yarn build`;
 - `npm run start` or `yarn start`.
+
+### Running the linter
+
+You can check your code for linting errors using the command `npm run test-code-style` or `yarn test-code-style`.
+
+To autocorrect your code according to the styleguide, run the command `npm run fix-code-style` or `yarn fix-code-style`.
 
 ### Running the tests
 
