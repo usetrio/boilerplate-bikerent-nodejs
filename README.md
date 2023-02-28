@@ -8,7 +8,7 @@ The goal of this project is to act as a starting point to solve the NodeJS Backe
 
 This is a TypeScript application that:
 
-- exposes the following Endpoints:
+- exposes the following Endpoints
 
 > GET _/bikes_
 >
@@ -19,6 +19,7 @@ This is a TypeScript application that:
 > POST _/users_
 >
 > POST _/candidates_
+
 - connects to a database to retrieve data
 
 ## 🔧 Stack Used
@@ -43,22 +44,22 @@ This is a TypeScript application that:
 
 To install the dependencies of the app, you can run `npm install` or `yarn`.
 
-After installing the dependencies, run `db:migrate:dev` to create the migrations on your local database.
+After installing the dependencies, run `npm run db:migrate:dev` or `yarn db:migrate:dev` to run the migrations on your local database.
 
 ### Running the app locally
 
 To run the app locally, you need to execute the following commands:
 
-- `npm run db:migrate:dev` or `yarn run db:migrate:dev`, if you have created any new migrations for the app;
-- `npm run start-dev` or `yarn run start-dev`.
+- `npm run db:migrate:dev` or `yarn run db:migrate:dev`, if you have changed the databases' schema
+- `npm run start-dev` or `yarn run start-dev`
 
 ### Running the app in production
 
 To run the app in production, you need to execute the following commands:
 
-- `npm run db:migrate:dev` or `yarn db:migrate:dev`, if you have created any new migrations for the app;
-- `npm run build` or `yarn build`;
-- `npm run start` or `yarn start`.
+- `npx prisma migrate deploy`
+- `npm run build` or `yarn build`
+- `npm run start` or `yarn start`
 
 ### Running the linter
 
@@ -72,9 +73,9 @@ To run all tests, you need to execute `npm test` or `yarn test`.
 
 You can also run specific tests with the following commands:
 
-- `npm run test:unit` or `yarn test:unit` runs unit tests, that should be named with the extension `.spec.ts`.
-- `npm run test:integration` or `yarn test:integration` runs integration tests, that should be named with the extension `.test.ts`.
-- `npm run test:staged` or `yarn test:staged` runs specific tests parsed as parameters.
-- `npm run test:ci` or `yarn test:ci` runs all tests creating the code coverage.
+- `npm run test:unit` or `yarn test:unit` runs unit tests, that should be named with the extension `.spec.ts`
+- `npm run test:integration` or `yarn test:integration` runs integration tests, that should be named with the extension `.test.ts`
+- `npm run test:staged` or `yarn test:staged` runs specific tests passed as parameters
+- `npm run test:ci` or `yarn test:ci` runs all tests creating the code coverage
 
 ## 🍀 That's it! Good luck!
