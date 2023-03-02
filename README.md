@@ -4,7 +4,15 @@
 ![At Trio, we build possibility](trio_banner.png)
 
 ## 📝 Scope
-The goal of this project is to act as a starting point to solve the NodeJS Backend "Bike Rent" Trio challenge.
+The aim of this project is to serve as a starting point for solving the NodeJS Backend "Bike Rent" Trio challenge.
+
+The system is composed of three entities:
+
+1. **Candidates**: These are the individuals who are participating in the challenge (in other words, you!). The API's initial design incorporates multi-tenancy concepts, which means that each candidate is considered an authenticated tenant and can create separate users and bikes.
+
+2. **Users**: They are the primary actors in the system and are involved in most practical use cases, such as renting bikes at a price if they're available.
+
+3. **Bikes**: These are the system's products that can be rented based on their availability.
 
 This is a TypeScript application that:
 
@@ -44,7 +52,11 @@ This is a TypeScript application that:
 
 To install the dependencies of the app, you can run `npm install` or `yarn`.
 
-After installing the dependencies, run `npm run db:migrate:dev` or `yarn db:migrate:dev` to run the migrations on your local database.
+Make sure your MySQL database set up properly with a user and a password. When this is done, make sure you create the `.env` file based on the `.env.example`. Your DATABASE_URL should have the format:
+
+> mysql://\<user\>:\<password\>@\<host\>:\<port\>/challenge
+
+After installing the dependencies, setting up the database, and creating the `.env` file, run `npm run db:migrate:dev` or `yarn db:migrate:dev` to run the migrations on your local database.
 
 ### Running the app locally
 
